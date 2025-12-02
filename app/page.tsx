@@ -121,7 +121,7 @@ export default function HomePage() {
                   </Button>
                   
                   {/* Botón Secundario */}
-                  <Button size="lg" variant="outline" asChild className="bg-transparent hover:bg-yellow-600/10 text-white border-2 border-yellow-600/60 hover:border-yellow-500 backdrop-blur-sm shadow-xl hover:shadow-2xl transition-all hover:scale-105 text-base px-8 py-6 rounded-2xl font-semibold">
+                  <Button size="lg" variant="outline" asChild className="bg-transparent hover:bg-yellow-600/10 text-white border-2 border-yellow-600/60 hover:border-yellow-600 backdrop-blur-sm shadow-xl hover:shadow-2xl transition-all hover:scale-105 text-base px-8 py-6 rounded-2xl font-semibold">
                     <Link href="#como-funciona">
                       Ver cómo funciona
                     </Link>
@@ -254,15 +254,6 @@ export default function HomePage() {
               </div>
 
             </div>
-
-            <div className="text-center mt-12">
-              <Button size="lg" variant="outline" asChild className="bg-transparent hover:bg-yellow-600/10 text-slate-900 border-2 border-yellow-600/60 hover:border-yellow-500 shadow-xl hover:shadow-2xl transition-all hover:scale-105 text-lg px-8 py-6 rounded-2xl font-semibold">
-                <a href="https://wa.me/5491112345678" target="_blank" rel="noopener noreferrer">
-                  <WhatsAppIcon className="mr-2 h-5 w-5" />
-                  Consultá por tu cirugía
-                </a>
-              </Button>
-            </div>
           </div>
         </div>
       </section>
@@ -329,11 +320,10 @@ export default function HomePage() {
 
             {/* CTA */}
             <div className="text-center mt-16">
-              <Button size="lg" variant="outline" asChild className="bg-transparent hover:bg-yellow-600/10 text-slate-900 border-2 border-yellow-600/60 hover:border-yellow-500 shadow-xl hover:shadow-2xl transition-all hover:scale-105 text-lg px-8 py-6 rounded-2xl font-semibold">
-                <a href="https://wa.me/5491112345678" target="_blank" rel="noopener noreferrer">
-                  <WhatsAppIcon className="mr-2 h-5 w-5" />
+              <Button size="lg" variant="outline" asChild className="bg-transparent hover:bg-yellow-600/10 text-slate-900 border-2 border-yellow-600/60 hover:border-yellow-600 shadow-xl hover:shadow-2xl transition-all hover:scale-105 text-lg px-8 py-6 rounded-2xl font-semibold">
+                <Link href="/contacto">
                   Quiero que evalúen mi caso
-                </a>
+                </Link>
               </Button>
             </div>
           </div>
@@ -358,8 +348,8 @@ export default function HomePage() {
               {/* Perfil 1 */}
               <div className="text-center group">
                 <div className="relative inline-block mb-6">
-                  <div className="absolute -inset-1 bg-linear-to-br from-slate-900 to-slate-700 rounded-full blur-lg opacity-25 group-hover:opacity-40 transition-opacity"></div>
-                  <div className="relative w-48 h-48 bg-linear-to-br from-slate-200 to-slate-300 rounded-full mx-auto flex items-center justify-center shadow-xl">
+                  <div className="absolute -inset-1 bg-linear-to-br from-slate-900 to-slate-700 rounded-2xl blur-lg opacity-25 group-hover:opacity-40 transition-opacity"></div>
+                  <div className="relative w-48 h-48 bg-linear-to-br from-slate-200 to-slate-300 rounded-2xl mx-auto flex items-center justify-center shadow-xl border border-yellow-600/40">
                     <Scale className="w-24 h-24 text-slate-600" />
                   </div>
                 </div>
@@ -372,8 +362,8 @@ export default function HomePage() {
               {/* Perfil 2 */}
               <div className="text-center group">
                 <div className="relative inline-block mb-6">
-                  <div className="absolute -inset-1 bg-linear-to-br from-slate-900 to-slate-700 rounded-full blur-lg opacity-25 group-hover:opacity-40 transition-opacity"></div>
-                  <div className="relative w-48 h-48 bg-linear-to-br from-slate-200 to-slate-300 rounded-full mx-auto flex items-center justify-center shadow-xl">
+                  <div className="absolute -inset-1 bg-linear-to-br from-slate-900 to-slate-700 rounded-2xl blur-lg opacity-25 group-hover:opacity-40 transition-opacity"></div>
+                  <div className="relative w-48 h-48 bg-linear-to-br from-slate-200 to-slate-300 rounded-2xl mx-auto flex items-center justify-center shadow-xl border border-yellow-600/40">
                     <FileText className="w-24 h-24 text-slate-600" />
                   </div>
                 </div>
@@ -403,7 +393,7 @@ export default function HomePage() {
               {/* Testimonio 1 */}
               <div className="bg-linear-to-br from-white to-slate-50 p-8 rounded-2xl shadow-lg border border-slate-200 hover:shadow-2xl hover:border-slate-300 transition-all duration-300">
                 <div className="mb-6">
-                  <svg className="w-12 h-12 text-slate-900/20" fill="currentColor" viewBox="0 0 32 32">
+                  <svg className="w-12 h-12 text-yellow-600" fill="currentColor" viewBox="0 0 32 32">
                     <path d="M10 8c-3.3 0-6 2.7-6 6v10h8V14c0-3.3-2.7-6-6-6zm16 0c-3.3 0-6 2.7-6 6v10h8V14c0-3.3-2.7-6-6-6z"/>
                   </svg>
                 </div>
@@ -418,7 +408,7 @@ export default function HomePage() {
               {/* Testimonio 2 */}
               <div className="bg-linear-to-br from-white to-slate-50 p-8 rounded-2xl shadow-lg border border-slate-200 hover:shadow-2xl hover:border-slate-300 transition-all duration-300">
                 <div className="mb-6">
-                  <svg className="w-12 h-12 text-slate-900/20" fill="currentColor" viewBox="0 0 32 32">
+                  <svg className="w-12 h-12 text-yellow-600" fill="currentColor" viewBox="0 0 32 32">
                     <path d="M10 8c-3.3 0-6 2.7-6 6v10h8V14c0-3.3-2.7-6-6-6zm16 0c-3.3 0-6 2.7-6 6v10h8V14c0-3.3-2.7-6-6-6z"/>
                   </svg>
                 </div>
@@ -433,7 +423,7 @@ export default function HomePage() {
               {/* Testimonio 3 */}
               <div className="bg-linear-to-br from-white to-slate-50 p-8 rounded-2xl shadow-lg border border-slate-200 hover:shadow-2xl hover:border-slate-300 transition-all duration-300">
                 <div className="mb-6">
-                  <svg className="w-12 h-12 text-slate-900/20" fill="currentColor" viewBox="0 0 32 32">
+                  <svg className="w-12 h-12 text-yellow-600" fill="currentColor" viewBox="0 0 32 32">
                     <path d="M10 8c-3.3 0-6 2.7-6 6v10h8V14c0-3.3-2.7-6-6-6zm16 0c-3.3 0-6 2.7-6 6v10h8V14c0-3.3-2.7-6-6-6z"/>
                   </svg>
                 </div>
@@ -502,7 +492,7 @@ export default function HomePage() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-slate-700/20 rounded-full blur-[150px] animate-pulse"></div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-3xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
                 Tu cirugía no puede esperar. Tu reclamo tampoco.
@@ -513,7 +503,7 @@ export default function HomePage() {
               <div className="h-1 w-24 bg-white/30 rounded-full mx-auto mt-8"></div>
             </div>
 
-            <form onSubmit={handleSubmit} className="bg-white/10 backdrop-blur-xl p-10 md:p-12 rounded-3xl border-2 border-white/20 shadow-2xl hover:border-white/30 transition-all">
+            <form onSubmit={handleSubmit} className="bg-white/10 backdrop-blur-xl p-8 md:p-10 rounded-3xl border-2 border-white/20 shadow-2xl hover:border-white/30 transition-all">
               <div className="grid md:grid-cols-2 gap-8 mb-8">
                 <div>
                   <label htmlFor="nombre" className="block text-base font-semibold mb-3 text-slate-100">
@@ -611,7 +601,7 @@ export default function HomePage() {
               <p className="text-slate-200 mb-6 text-lg">
                 ¿Preferís escribirnos directo?
               </p>
-              <Button size="lg" variant="outline" asChild className="bg-yellow-600/5 hover:bg-yellow-600/10 text-white border-2 border-yellow-600/60 hover:border-yellow-500 backdrop-blur-sm shadow-xl hover:scale-105 transition-all px-10 py-7 font-semibold text-lg rounded-2xl">
+              <Button size="lg" variant="outline" asChild className="bg-yellow-600/5 hover:bg-yellow-600/10 text-white border-2 border-yellow-600/60 hover:border-yellow-600 backdrop-blur-sm shadow-xl hover:scale-105 transition-all px-10 py-7 font-semibold text-lg rounded-2xl">
                 <a href="https://wa.me/5491112345678" target="_blank" rel="noopener noreferrer">
                   <WhatsAppIcon className="mr-3 h-6 w-6" />
                   Chatear ahora

@@ -39,7 +39,7 @@ export default function GraciasPage() {
               Volver al inicio
             </Link>
           </Button>
-          <Button size="lg" variant="outline" asChild className="bg-yellow-600/5 hover:bg-yellow-600/10 text-white border-2 border-yellow-600/60 hover:border-yellow-500 backdrop-blur-sm shadow-xl hover:scale-105 transition-all px-10 py-7 font-semibold text-lg rounded-2xl">
+          <Button size="lg" variant="outline" asChild className="bg-yellow-600/5 hover:bg-yellow-600/10 text-white border-2 border-yellow-600/60 hover:border-yellow-600 backdrop-blur-sm shadow-xl hover:scale-105 transition-all px-10 py-7 font-semibold text-lg rounded-2xl">
             <a href="https://wa.me/5491112345678" target="_blank" rel="noopener noreferrer">
               <WhatsAppIcon className="mr-3 h-6 w-6" />
               WhatsApp

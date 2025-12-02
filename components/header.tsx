@@ -38,7 +38,7 @@ export function Header() {
                         strokeWidth="1.5"/>
                   {/* Cruz médica en el centro */}
                   <path d="M20 14V26M14 20H26" 
-                        className="stroke-white group-hover:stroke-yellow-500 transition-colors" 
+                        className="stroke-white group-hover:stroke-yellow-600 transition-colors" 
                         strokeWidth="2.5" 
                         strokeLinecap="round"/>
                 </svg>
@@ -62,13 +62,10 @@ export function Header() {
             <Link href="/blog" className="px-4 py-2 text-slate-600 hover:text-slate-900 font-medium transition-colors rounded-lg hover:bg-slate-50">
               Blog
             </Link>
-            <Link href="/contacto" className="px-4 py-2 text-slate-600 hover:text-slate-900 font-medium transition-colors rounded-lg hover:bg-slate-50">
-              Contacto
-            </Link>
             
-            {/* CTA Button */}
+            {/* CTA Button - Contacto */}
             <Button asChild className="bg-slate-900 hover:bg-slate-800 text-white shadow-md hover:shadow-xl transition-all font-semibold ml-2">
-              <Link href="/contacto">Consulta gratis</Link>
+              <Link href="/contacto">Consulta Gratis</Link>
             </Button>
           </div>
 
@@ -106,16 +103,9 @@ export function Header() {
               >
                 Blog
               </Link>
-              <Link
-                href="/contacto"
-                className="text-slate-600 hover:text-slate-900 font-medium py-3 px-4 rounded-lg hover:bg-slate-50 transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Contacto
-              </Link>
-              <div className="flex flex-col gap-3 pt-6 border-t border-slate-200 mt-4">
+              <div className="pt-4 mt-2 border-t border-slate-200">
                 <Button asChild className="w-full bg-slate-900 hover:bg-slate-800 text-white shadow-md font-semibold">
-                  <Link href="/contacto" onClick={() => setIsMenuOpen(false)}>Consulta gratis</Link>
+                  <Link href="/contacto" onClick={() => setIsMenuOpen(false)}>Consulta Gratis</Link>
                 </Button>
               </div>
             </nav>

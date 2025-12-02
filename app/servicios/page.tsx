@@ -246,7 +246,7 @@ export default function ServiciosPage() {
               <Button size="lg" asChild className="bg-white text-slate-900 hover:bg-slate-100 shadow-2xl hover:shadow-white/20 hover:scale-105 transition-all px-8 py-6 font-bold text-base rounded-2xl">
                 <a href="/contacto">Consulta gratis →</a>
               </Button>
-              <Button size="lg" variant="outline" asChild className="bg-yellow-600/5 hover:bg-yellow-600/10 text-white border-2 border-yellow-600/60 hover:border-yellow-500 backdrop-blur-sm shadow-xl hover:scale-105 transition-all px-8 py-6 font-semibold text-base rounded-2xl">
+              <Button size="lg" variant="outline" asChild className="bg-yellow-600/5 hover:bg-yellow-600/10 text-white border-2 border-yellow-600/60 hover:border-yellow-600 backdrop-blur-sm shadow-xl hover:scale-105 transition-all px-8 py-6 font-semibold text-base rounded-2xl">
                 <a href="https://wa.me/5491112345678" target="_blank" rel="noopener noreferrer">
                   <WhatsAppIcon className="mr-2 h-5 w-5" />
                   WhatsApp
