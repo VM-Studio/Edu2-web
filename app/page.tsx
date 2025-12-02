@@ -1,10 +1,11 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import { CheckCircle, FileText, Scale, Gavel, Play, ChevronDown } from 'lucide-react';
+import { CheckCircle, FileText, Scale, Play, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import WhatsAppIcon from '@/components/whatsapp-icon';
 
 // Componente FAQ Item con acordeón - Diseño minimalista moderno
@@ -30,8 +31,8 @@ function FAQItem({ number, question, answer }: { number: number; question: strin
           {/* Número minimalista */}
           <div className={`relative w-10 h-10 md:w-12 md:h-12 rounded-full border-2 flex items-center justify-center text-lg md:text-xl font-bold shrink-0 transition-all duration-500 ${
             isOpen 
-              ? 'border-slate-900 bg-slate-900 text-white scale-110 rotate-12' 
-              : 'border-slate-300 text-slate-400 group-hover:border-slate-400 group-hover:scale-105'
+              ? 'border-yellow-600 bg-yellow-600 text-slate-900 scale-110 rotate-12' 
+              : 'border-yellow-600/40 text-slate-900 group-hover:border-yellow-600 group-hover:scale-105'
           }`}>
             {number}
           </div>
@@ -88,73 +89,185 @@ export default function HomePage() {
 
   return (
     <>
-      {/* 1. HERO - SIMPLIFICADO */}
-      <section className="relative py-12 md:py-16 bg-linear-to-br from-slate-950 via-slate-900 to-slate-800 text-white overflow-hidden">
+      {/* 1. HERO - DOS COLUMNAS */}
+      <section className="relative py-12 md:py-16 bg-linear-to-br from-slate-900 via-slate-800 to-slate-700 text-white overflow-hidden">
         {/* Efectos de fondo modernos */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px]"></div>
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-slate-700/30 rounded-full blur-[120px]"></div>
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-slate-600/20 rounded-full blur-[100px]"></div>
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-slate-600/30 rounded-full blur-[120px]"></div>
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-slate-500/20 rounded-full blur-[100px]"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-7xl mx-auto">
-            <div className="space-y-8">
+            {/* Grid de dos columnas: Izquierda contenido, Derecha video */}
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               
-              {/* Primera fila: Título + Video (centrados horizontalmente) */}
-              <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-                {/* Título */}
-                <div>
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] text-white">
-                    ¿Tu obra social rechazó cubrir tu cirugía maxilofacial?
-                  </h1>
-                </div>
+              {/* Columna Izquierda: Todo el texto y botones */}
+              <div className="space-y-6">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] text-white">
+                  ¿Tu obra social rechazó cubrir tu cirugía maxilofacial?
+                </h1>
                 
-                {/* Video */}
-                <div className="relative">
-                  <div className="absolute -inset-1 bg-linear-to-r from-slate-600 to-slate-700 rounded-2xl blur-2xl opacity-50"></div>
-                  <div className="relative aspect-video bg-linear-to-br from-slate-800 to-slate-900 rounded-2xl shadow-2xl overflow-hidden border border-white/10 backdrop-blur-sm">
-                    <div className="w-full h-full flex items-center justify-center">
-                      <div className="text-center space-y-3">
-                        <div className="w-20 h-20 mx-auto bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm border-2 border-white/30">
-                          <Play className="w-10 h-10 text-white ml-1" />
-                        </div>
-                        <p className="text-sm text-white font-semibold">Video explicativo</p>
+                <p className="text-lg md:text-xl text-slate-100 leading-relaxed">
+                  Somos abogados especializados en amparos de salud en Buenos Aires. Nos encargamos de todo el reclamo para que consigas la cobertura que te corresponde por ley.
+                </p>
+
+                {/* Botones */}
+                <div className="flex flex-col sm:flex-row gap-4 pt-2">
+                  {/* Botón Primario */}
+                  <Button size="lg" asChild className="bg-white text-slate-900 hover:bg-slate-100 shadow-xl hover:shadow-2xl transition-all hover:scale-105 text-base px-8 py-6 rounded-2xl font-bold">
+                    <Link href="/contacto">
+                      Consultá tu caso gratis
+                    </Link>
+                  </Button>
+                  
+                  {/* Botón Secundario */}
+                  <Button size="lg" variant="outline" asChild className="bg-transparent hover:bg-yellow-600/10 text-white border-2 border-yellow-600/60 hover:border-yellow-500 backdrop-blur-sm shadow-xl hover:shadow-2xl transition-all hover:scale-105 text-base px-8 py-6 rounded-2xl font-semibold">
+                    <Link href="#como-funciona">
+                      Ver cómo funciona
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+              
+              {/* Columna Derecha: Solo video */}
+              <div className="relative">
+                <div className="absolute -inset-1 bg-slate-700/20 rounded-2xl blur-2xl opacity-50"></div>
+                <div className="relative aspect-video bg-linear-to-br from-slate-800 to-slate-900 rounded-2xl shadow-2xl overflow-hidden border border-white/10 backdrop-blur-sm">
+                  <div className="w-full h-full flex items-center justify-center">
+                    <div className="text-center space-y-3">
+                      <div className="w-20 h-20 mx-auto bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm border-2 border-white/30 hover:scale-110 hover:bg-white/20 transition-all">
+                        <Play className="w-10 h-10 text-white ml-1" />
                       </div>
+                      <p className="text-sm text-white font-semibold">Video explicativo</p>
                     </div>
                   </div>
                 </div>
               </div>
-              
-              {/* Segunda fila: Subtítulo (ocupa 2 columnas completas) */}
-              <div>
-                <p className="text-lg md:text-xl text-slate-100 leading-relaxed max-w-5xl">
-                  Somos abogados especializados en amparos de salud en Buenos Aires. Nos encargamos de todo el reclamo para que consigas la cobertura que te corresponde por ley.
-                </p>
-              </div>
-
-              {/* Tercera fila: Botones a la izquierda */}
-              <div className="flex flex-col sm:flex-row gap-4">
-                {/* Botón Primario - WhatsApp */}
-                <Button size="lg" asChild className="bg-white text-slate-900 hover:bg-slate-100 shadow-xl hover:shadow-2xl transition-all hover:scale-105 text-base px-8 py-6 rounded-2xl">
-                  <a href="https://wa.me/5491112345678" target="_blank" rel="noopener noreferrer">
-                    <WhatsAppIcon className="mr-2 h-5 w-5" />
-                    Consultá tu caso gratis
-                  </a>
-                </Button>
-                
-                {/* Botón Secundario - Scroll */}
-                <Button size="lg" variant="outline" asChild className="bg-transparent hover:bg-white/10 text-white border-2 border-white/30 hover:border-white backdrop-blur-sm shadow-xl hover:shadow-2xl transition-all hover:scale-105 text-base px-8 py-6 rounded-2xl">
-                  <Link href="#como-funciona">
-                    Ver cómo funciona
-                  </Link>
-                </Button>
-              </div>
-
             </div>
           </div>
         </div>
       </section>
 
-      {/* 2. CÓMO FUNCIONA */}
+      {/* 2. QUÉ CIRUGÍAS RECLAMAMOS */}
+      <section className="py-16 md:py-24 bg-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-slate-100 rounded-full blur-[100px] opacity-50"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            {/* Título de sección */}
+            <div className="text-center mb-16">
+              <span className="text-slate-600 font-semibold uppercase tracking-wider text-sm">Especialización</span>
+              <h2 className="text-4xl md:text-5xl font-bold mt-4 text-slate-900">
+                Casos en los que podemos ayudarte
+              </h2>
+            </div>
+
+            {/* Grid de tarjetas */}
+            <div className="grid md:grid-cols-2 gap-6">
+              
+              {/* Cirugía 1 */}
+              <div className="group bg-linear-to-br from-white to-slate-50 p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-xl hover:border-slate-300 transition-all duration-300">
+                <div className="flex items-center gap-4">
+                  <div className="shrink-0">
+                    <div className="w-28 h-28 rounded-xl overflow-hidden shadow-lg group-hover:scale-110 transition-transform">
+                      <Image 
+                        src="/orthognathic.gif" 
+                        alt="Cirugía ortognática" 
+                        width={112} 
+                        height={112}
+                        className="w-full h-full object-cover"
+                        unoptimized
+                      />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold mb-2 text-slate-900">Cirugía ortognática</h3>
+                    <p className="text-slate-600 leading-relaxed text-sm">
+                      Corrección de maloclusiones y deformidades maxilares. Una de las más rechazadas con el argumento de &ldquo;estética&rdquo;.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Cirugía 2 */}
+              <div className="group bg-linear-to-br from-white to-slate-50 p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-xl hover:border-slate-300 transition-all duration-300">
+                <div className="flex items-center gap-4">
+                  <div className="shrink-0">
+                    <div className="w-28 h-28 rounded-xl overflow-hidden shadow-lg group-hover:scale-110 transition-transform">
+                      <Image 
+                        src="/maxillofacial.gif" 
+                        alt="Cirugía maxilofacial" 
+                        width={112} 
+                        height={112}
+                        className="w-full h-full object-cover"
+                        unoptimized
+                      />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold mb-2 text-slate-900">Cirugía maxilofacial</h3>
+                    <p className="text-slate-600 leading-relaxed text-sm">
+                      Intervenciones en mandíbula, maxilar y estructuras faciales por razones funcionales o reconstructivas.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Cirugía 3 */}
+              <div className="group bg-linear-to-br from-white to-slate-50 p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-xl hover:border-slate-300 transition-all duration-300">
+                <div className="flex items-center gap-4">
+                  <div className="shrink-0">
+                    <div className="w-28 h-28 rounded-xl overflow-hidden shadow-lg group-hover:scale-110 transition-transform">
+                      <Image 
+                        src="/mentoplastia.gif" 
+                        alt="Mentoplastia" 
+                        width={112} 
+                        height={112}
+                        className="w-full h-full object-cover"
+                        unoptimized
+                      />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold mb-2 text-slate-900">Mentoplastia</h3>
+                    <p className="text-slate-600 leading-relaxed text-sm">
+                      Corrección del mentón cuando afecta la mordida, respiración o está asociada a otros problemas maxilares.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Cirugía 4 */}
+              <div className="group bg-linear-to-br from-white to-slate-50 p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-xl hover:border-slate-300 transition-all duration-300">
+                <div className="flex items-center gap-4">
+                  <div className="shrink-0">
+                    <div className="w-28 h-28 bg-linear-to-br from-slate-900 to-slate-700 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                      <Scale className="w-14 h-14 text-white" />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold mb-2 text-slate-900">Otras cirugías</h3>
+                    <p className="text-slate-600 leading-relaxed text-sm">
+                      Si tu caso no está en la lista, consultanos igual. Evaluamos cada situación.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div className="text-center mt-12">
+              <Button size="lg" variant="outline" asChild className="bg-transparent hover:bg-yellow-600/10 text-slate-900 border-2 border-yellow-600/60 hover:border-yellow-500 shadow-xl hover:shadow-2xl transition-all hover:scale-105 text-lg px-8 py-6 rounded-2xl font-semibold">
+                <a href="https://wa.me/5491112345678" target="_blank" rel="noopener noreferrer">
+                  <WhatsAppIcon className="mr-2 h-5 w-5" />
+                  Consultá por tu cirugía
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. CÓMO FUNCIONA */}
       <section id="como-funciona" className="py-16 md:py-24 bg-linear-to-b from-white to-slate-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -216,100 +329,10 @@ export default function HomePage() {
 
             {/* CTA */}
             <div className="text-center mt-16">
-              <Button size="lg" asChild className="bg-slate-900 hover:bg-slate-800 shadow-xl hover:shadow-2xl transition-all hover:scale-105 text-lg px-8 py-6">
+              <Button size="lg" variant="outline" asChild className="bg-transparent hover:bg-yellow-600/10 text-slate-900 border-2 border-yellow-600/60 hover:border-yellow-500 shadow-xl hover:shadow-2xl transition-all hover:scale-105 text-lg px-8 py-6 rounded-2xl font-semibold">
                 <a href="https://wa.me/5491112345678" target="_blank" rel="noopener noreferrer">
                   <WhatsAppIcon className="mr-2 h-5 w-5" />
                   Quiero que evalúen mi caso
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 3. QUÉ CIRUGÍAS RECLAMAMOS */}
-      <section className="py-16 md:py-24 bg-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-slate-100 rounded-full blur-[100px] opacity-50"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-6xl mx-auto">
-            {/* Título de sección */}
-            <div className="text-center mb-16">
-              <span className="text-slate-600 font-semibold uppercase tracking-wider text-sm">Especialización</span>
-              <h2 className="text-4xl md:text-5xl font-bold mt-4 text-slate-900">
-                Casos en los que podemos ayudarte
-              </h2>
-            </div>
-
-            {/* Grid de tarjetas */}
-            <div className="grid md:grid-cols-2 gap-6">
-              
-              {/* Cirugía 1 */}
-              <div className="group bg-linear-to-br from-white to-slate-50 p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-xl hover:border-slate-300 transition-all duration-300">
-                <div className="flex items-start gap-4">
-                  <div className="w-16 h-16 bg-linear-to-br from-slate-900 to-slate-700 rounded-xl flex items-center justify-center shrink-0 shadow-lg group-hover:scale-110 transition-transform">
-                    <FileText className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-3 text-slate-900">Cirugía ortognática</h3>
-                    <p className="text-slate-600 leading-relaxed">
-                      Corrección de maloclusiones y deformidades maxilares. Una de las más rechazadas con el argumento de &ldquo;estética&rdquo;.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Cirugía 2 */}
-              <div className="group bg-linear-to-br from-white to-slate-50 p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-xl hover:border-slate-300 transition-all duration-300">
-                <div className="flex items-start gap-4">
-                  <div className="w-16 h-16 bg-linear-to-br from-slate-900 to-slate-700 rounded-xl flex items-center justify-center shrink-0 shadow-lg group-hover:scale-110 transition-transform">
-                    <Gavel className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-3 text-slate-900">Cirugía maxilofacial</h3>
-                    <p className="text-slate-600 leading-relaxed">
-                      Intervenciones en mandíbula, maxilar y estructuras faciales por razones funcionales o reconstructivas.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Cirugía 3 */}
-              <div className="group bg-linear-to-br from-white to-slate-50 p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-xl hover:border-slate-300 transition-all duration-300">
-                <div className="flex items-start gap-4">
-                  <div className="w-16 h-16 bg-linear-to-br from-slate-900 to-slate-700 rounded-xl flex items-center justify-center shrink-0 shadow-lg group-hover:scale-110 transition-transform">
-                    <CheckCircle className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-3 text-slate-900">Mentoplastia</h3>
-                    <p className="text-slate-600 leading-relaxed">
-                      Corrección del mentón cuando afecta la mordida, respiración o está asociada a otros problemas maxilares.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Cirugía 4 */}
-              <div className="group bg-linear-to-br from-white to-slate-50 p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-xl hover:border-slate-300 transition-all duration-300">
-                <div className="flex items-start gap-4">
-                  <div className="w-16 h-16 bg-linear-to-br from-slate-900 to-slate-700 rounded-xl flex items-center justify-center shrink-0 shadow-lg group-hover:scale-110 transition-transform">
-                    <Scale className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-3 text-slate-900">Otras cirugías</h3>
-                    <p className="text-slate-600 leading-relaxed">
-                      Si tu caso no está en la lista, consultanos igual. Evaluamos cada situación.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-            <div className="text-center mt-12">
-              <Button size="lg" asChild className="bg-slate-900 hover:bg-slate-800 shadow-xl hover:shadow-2xl transition-all hover:scale-105 text-lg px-8 py-6">
-                <a href="https://wa.me/5491112345678" target="_blank" rel="noopener noreferrer">
-                  <WhatsAppIcon className="mr-2 h-5 w-5" />
-                  Consultá por tu cirugía
                 </a>
               </Button>
             </div>
@@ -588,7 +611,7 @@ export default function HomePage() {
               <p className="text-slate-200 mb-6 text-lg">
                 ¿Preferís escribirnos directo?
               </p>
-              <Button size="lg" variant="outline" asChild className="bg-white/5 hover:bg-white/10 text-white border-2 border-white/30 hover:border-white backdrop-blur-sm shadow-xl hover:scale-105 transition-all px-10 py-7 font-semibold text-lg rounded-2xl">
+              <Button size="lg" variant="outline" asChild className="bg-yellow-600/5 hover:bg-yellow-600/10 text-white border-2 border-yellow-600/60 hover:border-yellow-500 backdrop-blur-sm shadow-xl hover:scale-105 transition-all px-10 py-7 font-semibold text-lg rounded-2xl">
                 <a href="https://wa.me/5491112345678" target="_blank" rel="noopener noreferrer">
                   <WhatsAppIcon className="mr-3 h-6 w-6" />
                   Chatear ahora

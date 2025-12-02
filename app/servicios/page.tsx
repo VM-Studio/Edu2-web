@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { CheckCircle, FileText, Gavel, Scale, ArrowRight, Clock, Shield, Target } from 'lucide-react';
+import { CheckCircle, FileText, Gavel, Scale, ArrowRight } from 'lucide-react';
 import type { Metadata } from 'next';
 import WhatsAppIcon from '@/components/whatsapp-icon';
 
@@ -189,7 +189,7 @@ export default function ServiciosPage() {
       </section>
 
       {/* Por qué elegirnos */}
-      <section className="py-16 md:py-20 bg-linear-to-b from-slate-50 to-white">
+      {/* <section className="py-16 md:py-20 bg-linear-to-b from-slate-50 to-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-slate-900">
@@ -229,7 +229,7 @@ export default function ServiciosPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Final */}
       <section className="py-16 md:py-20 bg-linear-to-br from-slate-950 via-slate-900 to-slate-800 text-white relative overflow-hidden">
@@ -246,7 +246,7 @@ export default function ServiciosPage() {
               <Button size="lg" asChild className="bg-white text-slate-900 hover:bg-slate-100 shadow-2xl hover:shadow-white/20 hover:scale-105 transition-all px-8 py-6 font-bold text-base rounded-2xl">
                 <a href="/contacto">Consulta gratis →</a>
               </Button>
-              <Button size="lg" variant="outline" asChild className="bg-white/5 hover:bg-white/10 text-white border-2 border-white/30 hover:border-white backdrop-blur-sm shadow-xl hover:scale-105 transition-all px-8 py-6 font-semibold text-base rounded-2xl">
+              <Button size="lg" variant="outline" asChild className="bg-yellow-600/5 hover:bg-yellow-600/10 text-white border-2 border-yellow-600/60 hover:border-yellow-500 backdrop-blur-sm shadow-xl hover:scale-105 transition-all px-8 py-6 font-semibold text-base rounded-2xl">
                 <a href="https://wa.me/5491112345678" target="_blank" rel="noopener noreferrer">
                   <WhatsAppIcon className="mr-2 h-5 w-5" />
                   WhatsApp

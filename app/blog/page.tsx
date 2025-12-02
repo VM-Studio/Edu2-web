@@ -91,54 +91,62 @@ export default function BlogPage() {
       <section className="py-24 md:py-28 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {articulos.map((articulo) => (
-                <article
+                <Link
                   key={articulo.id}
-                  className="group bg-white border-2 border-slate-200 rounded-3xl overflow-hidden hover:border-slate-900 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+                  href={`/blog/${articulo.slug}`}
+                  className="group"
                 >
-                  {/* Imagen placeholder */}
-                  <div className="h-56 bg-linear-to-br from-slate-900 to-slate-700 flex items-center justify-center relative overflow-hidden">
-                    <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px]"></div>
-                    <span className="text-white font-bold text-xl relative z-10 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-                      {articulo.categoria}
-                    </span>
-                  </div>
-
-                  {/* Contenido */}
-                  <div className="p-8">
-                    {/* Metadata */}
-                    <div className="flex items-center gap-6 text-sm text-slate-500 mb-5">
-                      <div className="flex items-center gap-2">
-                        <Calendar className="w-5 h-5" />
-                        <span>{new Date(articulo.fecha).toLocaleDateString('es-AR', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+                  <article className="h-full bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col border border-slate-100 hover:border-slate-200">
+                    {/* Imagen placeholder con overlay gradiente */}
+                    <div className="relative h-52 bg-linear-to-br from-slate-900 via-slate-800 to-slate-700 overflow-hidden">
+                      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px]"></div>
+                      
+                      {/* Categoría flotante */}
+                      <div className="absolute top-4 left-4">
+                        <span className="inline-block px-3 py-1.5 bg-white/10 backdrop-blur-sm text-white border-2 border-yellow-600 text-xs font-bold uppercase tracking-wider rounded-lg shadow-lg">
+                          {articulo.categoria}
+                        </span>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <Clock className="w-5 h-5" />
-                        <span className="font-semibold">{articulo.tiempoLectura}</span>
-                      </div>
+                      
+                      {/* Overlay gradiente sutil */}
+                      <div className="absolute inset-0 bg-linear-to-t from-slate-900/60 to-transparent"></div>
                     </div>
 
-                    {/* Título */}
-                    <h2 className="text-2xl font-bold mb-4 text-slate-900 group-hover:text-slate-700 transition-colors leading-snug">
-                      {articulo.titulo}
-                    </h2>
+                    {/* Contenido */}
+                    <div className="flex flex-col flex-1 p-6">
+                      {/* Metadata compacta */}
+                      <div className="flex items-center gap-4 text-xs text-slate-500 mb-4">
+                        <div className="flex items-center gap-1.5">
+                          <Calendar className="w-4 h-4" />
+                          <span>{new Date(articulo.fecha).toLocaleDateString('es-AR', { day: 'numeric', month: 'short' })}</span>
+                        </div>
+                        <div className="w-1 h-1 rounded-full bg-slate-300"></div>
+                        <div className="flex items-center gap-1.5">
+                          <Clock className="w-4 h-4" />
+                          <span className="font-semibold">{articulo.tiempoLectura}</span>
+                        </div>
+                      </div>
 
-                    {/* Extracto */}
-                    <p className="text-slate-600 mb-6 leading-relaxed text-lg">
-                      {articulo.extracto}
-                    </p>
+                      {/* Título */}
+                      <h2 className="text-xl font-bold mb-3 text-slate-900 group-hover:text-slate-700 transition-colors leading-tight line-clamp-3">
+                        {articulo.titulo}
+                      </h2>
 
-                    {/* Link */}
-                    <Link
-                      href={`/blog/${articulo.slug}`}
-                      className="inline-flex items-center gap-2 text-slate-900 font-bold hover:gap-4 transition-all text-lg"
-                    >
-                      Leer más
-                      <ArrowRight className="w-5 h-5" />
-                    </Link>
-                  </div>
-                </article>
+                      {/* Extracto */}
+                      <p className="text-slate-600 mb-5 leading-relaxed text-sm line-clamp-3 flex-1">
+                        {articulo.extracto}
+                      </p>
+
+                      {/* Link con flecha */}
+                      <div className="flex items-center gap-2 text-slate-900 font-semibold text-sm group-hover:gap-3 transition-all pt-2 border-t border-slate-100">
+                        <span>Leer artículo</span>
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </div>
+                  </article>
+                </Link>
               ))}
             </div>
 
