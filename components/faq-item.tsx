@@ -13,14 +13,14 @@ export default function FAQItem({ number, question, answer }: FAQItemProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className={`group relative bg-white rounded-xl transition-all duration-500 overflow-hidden ${
+    <div className={`group relative bg-white rounded-xl overflow-hidden ${
       isOpen 
-        ? 'shadow-[0_8px_30px_rgb(0,0,0,0.12)] scale-[1.01]' 
-        : 'shadow-[0_2px_8px_rgb(0,0,0,0.04)] hover:shadow-[0_4px_12px_rgb(0,0,0,0.08)]'
+        ? 'shadow-lg' 
+        : 'shadow-sm hover:shadow-md'
     }`}>
       {/* Barra lateral decorativa que crece */}
-      <div className={`absolute left-0 top-0 bottom-0 bg-slate-900 transition-all duration-500 ${
-        isOpen ? 'w-1.5' : 'w-0 group-hover:w-1'
+      <div className={`absolute left-0 top-0 bottom-0 bg-slate-900 transition-[width] duration-200 ${
+        isOpen ? 'w-1.5' : 'w-0'
       }`}></div>
       
       <button
@@ -29,32 +29,32 @@ export default function FAQItem({ number, question, answer }: FAQItemProps) {
       >
         <div className="flex items-center gap-5 md:gap-6 flex-1">
           {/* Número minimalista */}
-          <div className={`relative w-10 h-10 md:w-12 md:h-12 rounded-full border-2 flex items-center justify-center text-lg md:text-xl font-bold shrink-0 transition-all duration-500 ${
+          <div className={`relative w-10 h-10 md:w-12 md:h-12 rounded-full border-2 flex items-center justify-center text-lg md:text-xl font-bold shrink-0 transition-colors duration-200 ${
             isOpen 
-              ? 'border-yellow-600 bg-yellow-600 text-slate-900 scale-110 rotate-12' 
-              : 'border-yellow-600/40 text-slate-900 group-hover:border-yellow-600 group-hover:scale-105'
+              ? 'border-yellow-600 bg-yellow-600 text-slate-900' 
+              : 'border-yellow-600/40 text-slate-900'
           }`}>
             {number}
           </div>
           
-          <h3 className={`text-lg md:text-xl font-bold transition-colors duration-300 ${
-            isOpen ? 'text-slate-900' : 'text-slate-700 group-hover:text-slate-900'
+          <h3 className={`text-lg md:text-xl font-bold transition-colors duration-200 ${
+            isOpen ? 'text-slate-900' : 'text-slate-700'
           }`}>
             {question}
           </h3>
         </div>
         
         {/* Flecha minimalista */}
-        <div className={`shrink-0 transition-all duration-500 ${
-          isOpen ? 'rotate-180 text-slate-900' : 'text-slate-400 group-hover:text-slate-600'
+        <div className={`shrink-0 transition-transform duration-200 ${
+          isOpen ? 'rotate-180 text-slate-900' : 'text-slate-400'
         }`}>
           <ChevronDown className="w-6 h-6 md:w-7 md:h-7" />
         </div>
       </button>
       
-      {/* Respuesta con animación */}
+      {/* Respuesta con animación optimizada */}
       <div 
-        className={`transition-all duration-500 ease-in-out ${
+        className={`transition-[max-height,opacity] duration-300 ease-in-out ${
           isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >

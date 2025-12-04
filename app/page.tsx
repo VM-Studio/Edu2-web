@@ -11,10 +11,10 @@ export default function HomePage() {
     <>
       {/* 1. HERO - DOS COLUMNAS */}
       <section className="relative py-12 md:py-16 bg-linear-to-br from-slate-900 via-slate-800 to-slate-700 text-white overflow-hidden">
-        {/* Efectos de fondo modernos */}
+        {/* Efectos de fondo modernos - optimizados para móvil */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px]"></div>
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-slate-600/30 rounded-full blur-[120px]"></div>
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-slate-500/20 rounded-full blur-[100px]"></div>
+        <div className="hidden md:block absolute top-0 right-0 w-[500px] h-[500px] bg-slate-600/20 rounded-full blur-3xl"></div>
+        <div className="hidden md:block absolute bottom-0 left-0 w-[400px] h-[400px] bg-slate-500/10 rounded-full blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -41,7 +41,7 @@ export default function HomePage() {
                   </Button>
                   
                   {/* Botón Secundario */}
-                  <Button size="lg" variant="outline" asChild className="bg-transparent hover:bg-yellow-600/10 text-white border-2 border-yellow-600/60 hover:border-yellow-600 backdrop-blur-sm shadow-xl hover:shadow-2xl transition-all hover:scale-105 text-base px-8 py-6 rounded-2xl font-semibold">
+                  <Button size="lg" variant="outline" asChild className="bg-transparent hover:bg-yellow-600/10 text-white border-2 border-yellow-600/60 hover:border-yellow-600 shadow-xl transition-colors text-base px-8 py-6 rounded-2xl font-semibold">
                     <Link href="#como-funciona">
                       Ver cómo funciona
                     </Link>
@@ -51,11 +51,10 @@ export default function HomePage() {
               
               {/* Columna Derecha: Solo video */}
               <div className="relative">
-                <div className="absolute -inset-1 bg-slate-700/20 rounded-2xl blur-2xl opacity-50"></div>
-                <div className="relative aspect-video bg-linear-to-br from-slate-800 to-slate-900 rounded-2xl shadow-2xl overflow-hidden border border-white/10 backdrop-blur-sm">
+                <div className="relative aspect-video bg-linear-to-br from-slate-800 to-slate-900 rounded-2xl shadow-2xl overflow-hidden border border-white/10">
                   <div className="w-full h-full flex items-center justify-center">
                     <div className="text-center space-y-3">
-                      <div className="w-20 h-20 mx-auto bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm border-2 border-white/30 hover:scale-110 hover:bg-white/20 transition-all">
+                      <div className="w-20 h-20 mx-auto bg-white/10 rounded-full flex items-center justify-center border-2 border-white/30 hover:scale-110 hover:bg-white/20 transition-transform">
                         <Play className="w-10 h-10 text-white ml-1" />
                       </div>
                       <p className="text-sm text-white font-semibold">Video explicativo</p>
@@ -70,7 +69,7 @@ export default function HomePage() {
 
       {/* 2. QUÉ CIRUGÍAS RECLAMAMOS */}
       <section className="py-16 md:py-24 bg-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-slate-100 rounded-full blur-[100px] opacity-50"></div>
+        <div className="hidden md:block absolute top-0 right-0 w-[300px] h-[300px] bg-slate-100 rounded-full blur-3xl opacity-30"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             {/* Título de sección */}
@@ -299,7 +298,7 @@ export default function HomePage() {
 
       {/* 5. CASOS DE ÉXITO */}
       <section className="py-16 md:py-24 bg-white relative overflow-hidden">
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-slate-100 rounded-full blur-[120px] opacity-50"></div>
+        <div className="hidden md:block absolute bottom-0 left-0 w-[400px] h-[400px] bg-slate-100 rounded-full blur-3xl opacity-30"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">

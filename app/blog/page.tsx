@@ -19,7 +19,7 @@ const articulos = [
     categoria: "Guías Prácticas",
     tiempoLectura: "5 min",
   },
-  {
+  /*{
     id: 2,
     slug: "diferencia-cirugia-estetica-funcional-reclamos",
     titulo: "Diferencia entre cirugía estética y funcional en los reclamos de cobertura",
@@ -63,7 +63,7 @@ const articulos = [
     fecha: "2024-12-15",
     categoria: "Marco Legal",
     tiempoLectura: "8 min",
-  },
+  },*/
 ];
 
 export default function BlogPage() {
