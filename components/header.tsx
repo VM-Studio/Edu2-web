@@ -65,7 +65,7 @@ export function Header() {
             
             {/* CTA Button - Contacto */}
             <Button asChild className="bg-slate-900 hover:bg-slate-800 text-white shadow-md hover:shadow-xl transition-all font-semibold ml-2">
-              <Link href="/contacto">Consulta Gratis</Link>
+              <Link href="/contacto">Consultá tu Caso</Link>
             </Button>
           </div>
 
@@ -105,7 +105,7 @@ export function Header() {
               </Link>
               <div className="pt-4 mt-2 border-t border-slate-200">
                 <Button asChild className="w-full bg-slate-900 hover:bg-slate-800 text-white shadow-md font-semibold">
-                  <Link href="/contacto" onClick={() => setIsMenuOpen(false)}>Consulta Gratis</Link>
+                  <Link href="/contacto" onClick={() => setIsMenuOpen(false)}>Consultá tu Caso</Link>
                 </Button>
               </div>
             </nav>

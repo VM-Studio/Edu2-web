@@ -5,7 +5,7 @@ import WhatsAppIcon from '@/components/whatsapp-icon';
 
 export const metadata: Metadata = {
   title: "Servicios | Cirugías que Reclamamos - Salud Legal",
-  description: "Reclamamos cirugía ortognática, mentoplastia funcional, reconstrucciones maxilofaciales y más. Consulta gratis sin cargo.",
+  description: "Reclamamos cirugía ortognática, mentoplastia funcional, reconstrucciones maxilofaciales y más. Consultá tu caso.",
 };
 
 export default function ServiciosPage() {
@@ -27,7 +27,7 @@ export default function ServiciosPage() {
             </p>
             <Button size="lg" asChild className="bg-white text-slate-900 hover:bg-slate-100 shadow-2xl hover:shadow-white/20 hover:scale-105 transition-all px-8 py-6 font-bold text-base rounded-2xl">
               <a href="#contacto">
-                Consulta gratis <ArrowRight className="ml-2 h-5 w-5" />
+                Consultá tu caso <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
           </div>
@@ -179,7 +179,7 @@ export default function ServiciosPage() {
                 </ul>
                 <div className="bg-slate-50 border-l-4 border-slate-900 p-4 rounded-lg">
                   <p className="text-sm text-slate-700">
-                    <strong className="text-slate-900">¿No ves tu caso?</strong> Consultanos igual. Evaluamos cada situación de forma gratuita.
+                    <strong className="text-slate-900">¿No ves tu caso?</strong> Consultanos igual. Evaluamos cada situación.
                   </p>
                 </div>
               </div>
@@ -240,11 +240,11 @@ export default function ServiciosPage() {
               ¿Tu caso no está en la lista?
             </h2>
             <p className="text-lg md:text-xl text-slate-200 mb-8 font-light">
-              Consultanos igual. Si tu cirugía tiene indicación médica, podemos evaluar el reclamo de forma <span className="font-semibold text-white">completamente gratuita</span>.
+              Consultanos igual. Si tu cirugía tiene indicación médica, podemos evaluar el reclamo.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="bg-white text-slate-900 hover:bg-slate-100 shadow-2xl hover:shadow-white/20 hover:scale-105 transition-all px-8 py-6 font-bold text-base rounded-2xl">
-                <a href="/contacto">Consulta gratis →</a>
+                <a href="/contacto">Consultá tu caso →</a>
               </Button>
               <Button size="lg" variant="outline" asChild className="bg-yellow-600/5 hover:bg-yellow-600/10 text-white border-2 border-yellow-600/60 hover:border-yellow-600 backdrop-blur-sm shadow-xl hover:scale-105 transition-all px-8 py-6 font-semibold text-base rounded-2xl">
                 <a href="https://wa.me/5491112345678" target="_blank" rel="noopener noreferrer">

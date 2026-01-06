@@ -157,11 +157,11 @@ export default function BlogPage() {
                   ¿Tenés dudas sobre tu caso?
                 </h3>
                 <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                  Si no encontraste la respuesta que buscabas, contactanos directamente y te asesoramos <span className="font-semibold text-slate-900">sin cargo</span>.
+                  Si no encontraste la respuesta que buscabas, contactanos directamente y te asesoramos.
                 </p>
                 <Button size="lg" asChild className="bg-linear-to-r from-slate-900 to-slate-700 hover:from-slate-800 hover:to-slate-600 shadow-2xl hover:scale-105 transition-all px-10 py-7 font-bold text-lg rounded-2xl">
                   <Link href="/contacto">
-                    Consulta gratuita →
+                    Consultá tu caso →
                   </Link>
                 </Button>
               </div>

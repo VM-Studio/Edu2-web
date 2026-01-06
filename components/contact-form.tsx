@@ -182,7 +182,7 @@ export default function ContactForm() {
                     size="lg" 
                     className="w-full bg-linear-to-r from-slate-900 to-slate-700 hover:from-slate-800 hover:to-slate-600 text-white shadow-2xl hover:scale-[1.02] transition-all text-lg md:text-xl py-6 md:py-8 font-bold rounded-2xl"
                   >
-                    Enviar consulta gratuita →
+                    Enviar consulta →
                   </Button>
 
                   <div className="flex items-center justify-center gap-3">

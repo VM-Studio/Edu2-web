@@ -184,11 +184,11 @@ export default function ArticuloBlogPage() {
                   ¿Te rechazaron tu cirugía?
                 </h3>
                 <p className="text-slate-300 mb-6 text-lg">
-                  Evaluamos tu caso sin costo. Si es viable, te acompañamos en todo el proceso sin honorarios por adelantado.
+                  Evaluamos tu caso. Si es viable, te acompañamos en todo el proceso sin honorarios por adelantado.
                 </p>
                 <Button size="lg" asChild className="bg-white text-slate-900 hover:bg-slate-100">
                   <Link href="/contacto">
-                    Consulta gratuita
+                    Consultá tu caso
                   </Link>
                 </Button>
               </div>

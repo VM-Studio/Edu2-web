@@ -20,7 +20,7 @@ export default function GraciasPage() {
         </h1>
         
         <p className="text-xl md:text-2xl text-slate-200 mb-12 font-light leading-relaxed">
-          Recibimos tu consulta correctamente. Nuestro equipo la revisará y te contactaremos en las próximas <span className="font-semibold text-white">24 horas</span> para evaluar tu caso de forma <span className="font-semibold text-white">gratuita</span>.
+          Recibimos tu consulta correctamente. Nuestro equipo la revisará y te contactaremos en las próximas <span className="font-semibold text-white">24 horas</span> para evaluar tu caso.
         </p>
 
         <div className="bg-white/10 backdrop-blur-xl p-10 rounded-3xl border-2 border-white/20 mb-12 shadow-2xl">
