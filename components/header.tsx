@@ -59,6 +59,9 @@ export function Header() {
             <Link href="/servicios" className="px-4 py-2 text-slate-600 hover:text-slate-900 font-medium transition-colors rounded-lg hover:bg-slate-50">
               Reclamos
             </Link>
+            <Link href="/casos-de-exito" className="px-4 py-2 text-slate-600 hover:text-slate-900 font-medium transition-colors rounded-lg hover:bg-slate-50">
+              Casos de Éxito
+            </Link>
             <Link href="/blog" className="px-4 py-2 text-slate-600 hover:text-slate-900 font-medium transition-colors rounded-lg hover:bg-slate-50">
               Blog
             </Link>
@@ -95,6 +98,13 @@ export function Header() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Reclamos
+              </Link>
+              <Link
+                href="/casos-de-exito"
+                className="text-slate-600 hover:text-slate-900 font-medium py-3 px-4 rounded-lg hover:bg-slate-50 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Casos de Éxito
               </Link>
               <Link
                 href="/blog"

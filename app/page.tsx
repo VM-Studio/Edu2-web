@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { FileText, Scale, Play } from 'lucide-react';
+import { FileText, Scale, Play, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import FAQItem from '@/components/faq-item';
@@ -433,180 +433,70 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. CASOS DE ÉXITO */}
+      {/* 5. CASOS DE ÉXITO - PREVIEW */}
       <section className="py-16 md:py-24 bg-white relative overflow-hidden">
         <div className="hidden md:block absolute bottom-0 left-0 w-[400px] h-[400px] bg-slate-100 rounded-full blur-3xl opacity-30"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12 md:mb-16">
-              <span className="text-slate-600 font-semibold uppercase tracking-wider text-sm">Resultados Comprobados</span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 text-slate-900">
-                Casos de Éxito
-              </h2>
-              <p className="text-slate-600 mt-4 md:mt-6 text-base md:text-lg max-w-3xl mx-auto leading-relaxed px-4">
-                Estos son algunos de los casos que ganamos recientemente, demostrando nuestro compromiso y experiencia en conseguir las coberturas que corresponden por ley.
-              </p>
-            </div>
-
-            <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-              {/* Caso 1 - Cirugía Ortognática */}
-              <div className="bg-linear-to-br from-slate-900 to-slate-800 text-white p-6 md:p-8 rounded-2xl shadow-2xl border-2 border-slate-700 hover:shadow-3xl hover:scale-105 transition-all duration-300 relative overflow-hidden group">
-                {/* Efecto de fondo animado */}
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] opacity-50"></div>
-                
-                <div className="relative z-10">
-                  {/* Badge superior */}
-                  <div className="inline-block px-3 py-1.5 bg-green-500/20 backdrop-blur-sm rounded-full border border-green-400/30 mb-4 md:mb-6">
-                    <span className="text-xs font-bold text-green-300 uppercase tracking-wide">Caso Ganado</span>
-                  </div>
-
-                  <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-white">Cirugía Ortognática</h3>
-                  
-                  <div className="space-y-3 mb-6">
-                    <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center shrink-0 mt-0.5">
-                        <span className="text-green-400 text-xs font-bold">✓</span>
-                      </div>
-                      <p className="text-slate-200 text-sm leading-relaxed">
-                        <span className="font-semibold text-white">Prestación:</span> Cobertura total de cirugía ortognática bimaxilar con cirujano de preferencia
-                      </p>
-                    </div>
-                    
-                    <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center shrink-0 mt-0.5">
-                        <span className="text-green-400 text-xs font-bold">✓</span>
-                      </div>
-                      <p className="text-slate-200 text-sm leading-relaxed">
-                        <span className="font-semibold text-white">Obra Social:</span> OSDE (había rechazado argumentando "motivos estéticos")
-                      </p>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center shrink-0 mt-0.5">
-                        <span className="text-green-400 text-xs font-bold">✓</span>
-                      </div>
-                      <p className="text-slate-200 text-sm leading-relaxed">
-                        <span className="font-semibold text-white">Resultado:</span> Sentencia favorable en 3 meses. Cirugía realizada con 100% de cobertura
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="pt-4 border-t border-white/10">
-                    <p className="text-xs text-slate-400 italic">
-                      El paciente presentaba maloclusión clase III y apnea del sueño. Logramos demostrar la necesidad médica funcional.
-                    </p>
-                  </div>
+            {/* Contenido centrado - sin imagen */}
+            <div className="max-w-4xl mx-auto">
+              
+              {/* Contenido y CTA */}
+              <div className="space-y-6 text-center">
+                <div>
+                  <span className="text-slate-600 font-semibold uppercase tracking-wider text-sm">Resultados Comprobados</span>
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 text-slate-900">
+                    Casos de Éxito
+                  </h2>
                 </div>
-              </div>
-
-              {/* Caso 2 - Mentoplastia Funcional */}
-              <div className="bg-linear-to-br from-slate-900 to-slate-800 text-white p-6 md:p-8 rounded-2xl shadow-2xl border-2 border-slate-700 hover:shadow-3xl hover:scale-105 transition-all duration-300 relative overflow-hidden group">
-                {/* Efecto de fondo animado */}
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] opacity-50"></div>
                 
-                <div className="relative z-10">
-                  {/* Badge superior */}
-                  <div className="inline-block px-3 py-1.5 bg-green-500/20 backdrop-blur-sm rounded-full border border-green-400/30 mb-4 md:mb-6">
-                    <span className="text-xs font-bold text-green-300 uppercase tracking-wide">Caso Ganado</span>
-                  </div>
-
-                  <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-white">Mentoplastia Funcional</h3>
-                  
-                  <div className="space-y-3 mb-6">
-                    <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center shrink-0 mt-0.5">
-                        <span className="text-green-400 text-xs font-bold">✓</span>
-                      </div>
-                      <p className="text-slate-200 text-sm leading-relaxed">
-                        <span className="font-semibold text-white">Prestación:</span> Mentoplastia con cobertura de materiales e implantes
-                      </p>
-                    </div>
-                    
-                    <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center shrink-0 mt-0.5">
-                        <span className="text-green-400 text-xs font-bold">✓</span>
-                      </div>
-                      <p className="text-slate-200 text-sm leading-relaxed">
-                        <span className="font-semibold text-white">Obra Social:</span> Swiss Medical (negaba cobertura por considerar la intervención cosmética)
-                      </p>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center shrink-0 mt-0.5">
-                        <span className="text-green-400 text-xs font-bold">✓</span>
-                      </div>
-                      <p className="text-slate-200 text-sm leading-relaxed">
-                        <span className="font-semibold text-white">Resultado:</span> Amparo concedido en 2.5 meses. Cirugía autorizada con el profesional elegido por el paciente
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="pt-4 border-t border-white/10">
-                    <p className="text-xs text-slate-400 italic">
-                      Retrognatismo mandibular severo con disfunción de ATM y dificultades respiratorias documentadas.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Caso 3 - Reconstrucción Maxilofacial */}
-              <div className="bg-linear-to-br from-slate-900 to-slate-800 text-white p-6 md:p-8 rounded-2xl shadow-2xl border-2 border-slate-700 hover:shadow-3xl hover:scale-105 transition-all duration-300 relative overflow-hidden group">
-                {/* Efecto de fondo animado */}
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] opacity-50"></div>
-                
-                <div className="relative z-10">
-                  {/* Badge superior */}
-                  <div className="inline-block px-3 py-1.5 bg-green-500/20 backdrop-blur-sm rounded-full border border-green-400/30 mb-4 md:mb-6">
-                    <span className="text-xs font-bold text-green-300 uppercase tracking-wide">Caso Ganado</span>
-                  </div>
-
-                  <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-white">Reconstrucción Maxilofacial</h3>
-                  
-                  <div className="space-y-3 mb-6">
-                    <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center shrink-0 mt-0.5">
-                        <span className="text-green-400 text-xs font-bold">✓</span>
-                      </div>
-                      <p className="text-slate-200 text-sm leading-relaxed">
-                        <span className="font-semibold text-white">Prestación:</span> Reconstrucción mandibular post-traumática con injerto óseo y placas de titanio
-                      </p>
-                    </div>
-                    
-                    <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center shrink-0 mt-0.5">
-                        <span className="text-green-400 text-xs font-bold">✓</span>
-                      </div>
-                      <p className="text-slate-200 text-sm leading-relaxed">
-                        <span className="font-semibold text-white">Obra Social:</span> Galeno (rechazaba materiales específicos argumentando costos elevados)
-                      </p>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center shrink-0 mt-0.5">
-                        <span className="text-green-400 text-xs font-bold">✓</span>
-                      </div>
-                      <p className="text-slate-200 text-sm leading-relaxed">
-                        <span className="font-semibold text-white">Resultado:</span> Medida cautelar urgente concedida en 15 días. Cirugía realizada con todos los materiales necesarios
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="pt-4 border-t border-white/10">
-                    <p className="text-xs text-slate-400 italic">
-                      Secuela de accidente con fractura mandibular compleja. Urgencia médica que requirió acción judicial inmediata.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Nota estadística */}
-            <div className="mt-10 md:mt-12 text-center px-4">
-              <div className="inline-block bg-green-50 border-2 border-green-200 px-6 md:px-8 py-3 md:py-4 rounded-2xl">
-                <p className="text-slate-700 font-semibold text-base md:text-lg">
-                  <span className="text-green-600 font-bold text-xl md:text-2xl">+95%</span> de nuestros casos resultan en sentencias favorables
+                <p className="text-slate-600 text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
+                  Conocé los casos reales que ganamos: cirugías ortognáticas, mentoplastias funcionales y reconstrucciones maxilofaciales. Cada caso representa una victoria para nuestros clientes y la defensa del derecho a la salud.
                 </p>
+
+                {/* Mini preview de casos */}
+                <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+                  <div className="flex flex-col items-center gap-3 bg-slate-50 p-6 rounded-xl border border-slate-200">
+                    <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center shrink-0">
+                      <span className="text-white text-sm font-bold">✓</span>
+                    </div>
+                    <div className="text-center">
+                      <p className="font-semibold text-slate-900 mb-1">Cirugía Ortognática</p>
+                      <p className="text-sm text-slate-600">OSDE - Sentencia en 3 meses</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-col items-center gap-3 bg-slate-50 p-6 rounded-xl border border-slate-200">
+                    <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center shrink-0">
+                      <span className="text-white text-sm font-bold">✓</span>
+                    </div>
+                    <div className="text-center">
+                      <p className="font-semibold text-slate-900 mb-1">Mentoplastia Funcional</p>
+                      <p className="text-sm text-slate-600">Swiss Medical - Amparo en 2.5 meses</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-col items-center gap-3 bg-slate-50 p-6 rounded-xl border border-slate-200">
+                    <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center shrink-0">
+                      <span className="text-white text-sm font-bold">✓</span>
+                    </div>
+                    <div className="text-center">
+                      <p className="font-semibold text-slate-900 mb-1">Reconstrucción Maxilofacial</p>
+                      <p className="text-sm text-slate-600">Galeno - Cautelar en 15 días</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Botón Leer Más */}
+                <div className="pt-6">
+                  <Button size="lg" asChild className="bg-linear-to-r from-slate-900 to-slate-700 hover:from-slate-800 hover:to-slate-600 text-white shadow-xl hover:shadow-2xl transition-all hover:scale-105 text-base md:text-lg px-8 py-6 rounded-2xl font-bold">
+                    <Link href="/casos-de-exito">
+                      Ver todos los casos de éxito →
+                    </Link>
+                  </Button>
+                </div>
               </div>
+
             </div>
           </div>
         </div>
