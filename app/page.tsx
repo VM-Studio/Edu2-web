@@ -370,23 +370,6 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-
-            {/* Destacado de modalidad online */}
-            <div className="text-center">
-              <div className="inline-block bg-green-500/20 backdrop-blur-sm border-2 border-green-400/30 rounded-2xl px-6 md:px-8 py-4 md:py-5 mx-4">
-                <div className="flex items-center justify-center gap-3 md:gap-4 flex-wrap">
-                  <svg className="w-7 h-7 md:w-8 md:h-8 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <p className="text-white font-bold text-lg md:text-xl">
-                    Modalidad 100% online para tu comodidad
-                  </p>
-                </div>
-                <p className="text-slate-200 text-xs md:text-sm mt-2 md:mt-3">
-                  Sin necesidad de traslados. Todo el proceso se gestiona de forma remota.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>

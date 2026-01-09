@@ -16,20 +16,12 @@ export default function CasosDeExitoPage() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px]"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block px-4 py-2 bg-green-500/20 backdrop-blur-sm rounded-full border border-green-400/30 mb-6">
-              <span className="text-sm font-bold text-green-300 uppercase tracking-wide">Resultados Comprobados</span>
-            </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
               Casos de Éxito
             </h1>
             <p className="text-lg md:text-xl text-slate-200 mb-8 font-light leading-relaxed">
               Estos son algunos de los casos que ganamos recientemente, demostrando nuestro compromiso y experiencia en conseguir las coberturas que corresponden por ley.
             </p>
-            <div className="inline-block bg-green-50 border-2 border-green-200 px-6 py-3 rounded-xl">
-              <p className="text-slate-700 font-semibold text-sm md:text-base">
-                <span className="text-green-600 font-bold text-xl md:text-2xl">+95%</span> de nuestros casos resultan en sentencias favorables
-              </p>
-            </div>
           </div>
         </div>
       </section>
@@ -55,11 +47,6 @@ export default function CasosDeExitoPage() {
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] opacity-50"></div>
                 
                 <div className="relative z-10">
-                  {/* Badge superior */}
-                  <div className="inline-block px-3 py-1.5 bg-green-500/20 backdrop-blur-sm rounded-full border border-green-400/30 mb-4 md:mb-6">
-                    <span className="text-xs font-bold text-green-300 uppercase tracking-wide">Caso Ganado</span>
-                  </div>
-
                   <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-white">Cirugía Ortognática</h3>
                   
                   <div className="space-y-3 mb-6">
@@ -111,11 +98,6 @@ export default function CasosDeExitoPage() {
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] opacity-50"></div>
                 
                 <div className="relative z-10">
-                  {/* Badge superior */}
-                  <div className="inline-block px-3 py-1.5 bg-green-500/20 backdrop-blur-sm rounded-full border border-green-400/30 mb-4 md:mb-6">
-                    <span className="text-xs font-bold text-green-300 uppercase tracking-wide">Caso Ganado</span>
-                  </div>
-
                   <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-white">Mentoplastia Funcional</h3>
                   
                   <div className="space-y-3 mb-6">
@@ -167,11 +149,6 @@ export default function CasosDeExitoPage() {
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] opacity-50"></div>
                 
                 <div className="relative z-10">
-                  {/* Badge superior */}
-                  <div className="inline-block px-3 py-1.5 bg-green-500/20 backdrop-blur-sm rounded-full border border-green-400/30 mb-4 md:mb-6">
-                    <span className="text-xs font-bold text-green-300 uppercase tracking-wide">Caso Ganado</span>
-                  </div>
-
                   <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-white">Reconstrucción Maxilofacial</h3>
                   
                   <div className="space-y-3 mb-6">
