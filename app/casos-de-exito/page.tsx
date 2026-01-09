@@ -1,5 +1,4 @@
 import { Button } from '@/components/ui/button';
-import { CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import FAQItem from '@/components/faq-item';
@@ -65,8 +64,10 @@ export default function CasosDeExitoPage() {
                   
                   <div className="space-y-3 mb-6">
                     <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center shrink-0 mt-0.5">
-                        <span className="text-green-400 text-xs font-bold">✓</span>
+                      <div className="w-5 h-5 rounded border-2 border-green-400 flex items-center justify-center shrink-0 mt-0.5">
+                        <svg className="w-3 h-3 text-green-400" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/>
+                        </svg>
                       </div>
                       <p className="text-slate-200 text-sm leading-relaxed">
                         <span className="font-semibold text-white">Prestación:</span> Cobertura total de cirugía ortognática bimaxilar con cirujano de preferencia
@@ -74,8 +75,10 @@ export default function CasosDeExitoPage() {
                     </div>
                     
                     <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center shrink-0 mt-0.5">
-                        <span className="text-green-400 text-xs font-bold">✓</span>
+                      <div className="w-5 h-5 rounded border-2 border-green-400 flex items-center justify-center shrink-0 mt-0.5">
+                        <svg className="w-3 h-3 text-green-400" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/>
+                        </svg>
                       </div>
                       <p className="text-slate-200 text-sm leading-relaxed">
                         <span className="font-semibold text-white">Obra Social:</span> OSDE (había rechazado argumentando "motivos estéticos")
@@ -83,8 +86,10 @@ export default function CasosDeExitoPage() {
                     </div>
 
                     <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center shrink-0 mt-0.5">
-                        <span className="text-green-400 text-xs font-bold">✓</span>
+                      <div className="w-5 h-5 rounded border-2 border-green-400 flex items-center justify-center shrink-0 mt-0.5">
+                        <svg className="w-3 h-3 text-green-400" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/>
+                        </svg>
                       </div>
                       <p className="text-slate-200 text-sm leading-relaxed">
                         <span className="font-semibold text-white">Resultado:</span> Sentencia favorable en 3 meses. Cirugía realizada con 100% de cobertura
@@ -115,8 +120,10 @@ export default function CasosDeExitoPage() {
                   
                   <div className="space-y-3 mb-6">
                     <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center shrink-0 mt-0.5">
-                        <span className="text-green-400 text-xs font-bold">✓</span>
+                      <div className="w-5 h-5 rounded border-2 border-green-400 flex items-center justify-center shrink-0 mt-0.5">
+                        <svg className="w-3 h-3 text-green-400" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/>
+                        </svg>
                       </div>
                       <p className="text-slate-200 text-sm leading-relaxed">
                         <span className="font-semibold text-white">Prestación:</span> Mentoplastia con cobertura de materiales e implantes
@@ -124,8 +131,10 @@ export default function CasosDeExitoPage() {
                     </div>
                     
                     <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center shrink-0 mt-0.5">
-                        <span className="text-green-400 text-xs font-bold">✓</span>
+                      <div className="w-5 h-5 rounded border-2 border-green-400 flex items-center justify-center shrink-0 mt-0.5">
+                        <svg className="w-3 h-3 text-green-400" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/>
+                        </svg>
                       </div>
                       <p className="text-slate-200 text-sm leading-relaxed">
                         <span className="font-semibold text-white">Obra Social:</span> Swiss Medical (negaba cobertura por considerar la intervención cosmética)
@@ -133,8 +142,10 @@ export default function CasosDeExitoPage() {
                     </div>
 
                     <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center shrink-0 mt-0.5">
-                        <span className="text-green-400 text-xs font-bold">✓</span>
+                      <div className="w-5 h-5 rounded border-2 border-green-400 flex items-center justify-center shrink-0 mt-0.5">
+                        <svg className="w-3 h-3 text-green-400" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/>
+                        </svg>
                       </div>
                       <p className="text-slate-200 text-sm leading-relaxed">
                         <span className="font-semibold text-white">Resultado:</span> Amparo concedido en 2.5 meses. Cirugía autorizada con el profesional elegido por el paciente
@@ -165,8 +176,10 @@ export default function CasosDeExitoPage() {
                   
                   <div className="space-y-3 mb-6">
                     <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center shrink-0 mt-0.5">
-                        <span className="text-green-400 text-xs font-bold">✓</span>
+                      <div className="w-5 h-5 rounded border-2 border-green-400 flex items-center justify-center shrink-0 mt-0.5">
+                        <svg className="w-3 h-3 text-green-400" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/>
+                        </svg>
                       </div>
                       <p className="text-slate-200 text-sm leading-relaxed">
                         <span className="font-semibold text-white">Prestación:</span> Reconstrucción mandibular post-traumática con injerto óseo y placas de titanio
@@ -174,8 +187,10 @@ export default function CasosDeExitoPage() {
                     </div>
                     
                     <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center shrink-0 mt-0.5">
-                        <span className="text-green-400 text-xs font-bold">✓</span>
+                      <div className="w-5 h-5 rounded border-2 border-green-400 flex items-center justify-center shrink-0 mt-0.5">
+                        <svg className="w-3 h-3 text-green-400" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/>
+                        </svg>
                       </div>
                       <p className="text-slate-200 text-sm leading-relaxed">
                         <span className="font-semibold text-white">Obra Social:</span> Galeno (rechazaba materiales específicos argumentando costos elevados)
@@ -183,8 +198,10 @@ export default function CasosDeExitoPage() {
                     </div>
 
                     <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center shrink-0 mt-0.5">
-                        <span className="text-green-400 text-xs font-bold">✓</span>
+                      <div className="w-5 h-5 rounded border-2 border-green-400 flex items-center justify-center shrink-0 mt-0.5">
+                        <svg className="w-3 h-3 text-green-400" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/>
+                        </svg>
                       </div>
                       <p className="text-slate-200 text-sm leading-relaxed">
                         <span className="font-semibold text-white">Resultado:</span> Medida cautelar urgente concedida en 15 días. Cirugía realizada con todos los materiales necesarios

@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { FileText, Scale, Play, CheckCircle } from 'lucide-react';
+import { Scale, Play } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import FAQItem from '@/components/faq-item';
@@ -410,13 +410,20 @@ export default function HomePage() {
               <div className="text-center group">
                 <div className="relative inline-block mb-6">
                   <div className="absolute -inset-1 bg-linear-to-br from-slate-900 to-slate-700 rounded-2xl blur-lg opacity-25 group-hover:opacity-40 transition-opacity"></div>
-                  <div className="relative w-40 h-40 md:w-48 md:h-48 bg-linear-to-br from-slate-200 to-slate-300 rounded-2xl mx-auto flex items-center justify-center shadow-xl border border-yellow-600/40">
-                    <Scale className="w-20 h-20 md:w-24 md:h-24 text-slate-600" />
+                  <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-2xl mx-auto overflow-hidden shadow-xl border-4 border-slate-200">
+                    <Image 
+                      src="/abogado.png" 
+                      alt="Dr. Eduardo Robles - Abogado especializado en Derecho a la Salud" 
+                      width={192}
+                      height={192}
+                      className="w-full h-full object-cover"
+                      priority
+                    />
                   </div>
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-3 text-slate-900">Dr. Eduardo Robles</h3>
-                <p className="text-base md:text-lg font-semibold text-slate-700 mb-4 px-4">Abogado, Diplomado en Derecho a la Salud</p>
-                <div className="text-slate-600 leading-relaxed max-w-2xl mx-auto space-y-3 text-left">
+                <p className="text-base md:text-lg font-semibold text-slate-700 mb-6 md:mb-8 px-4">Abogado, Diplomado en Derecho a la Salud</p>
+                <div className="text-slate-600 leading-relaxed max-w-2xl mx-auto space-y-5 md:space-y-6 text-left">
                   <p className="text-sm md:text-base">
                     Con <span className="font-semibold text-slate-900">10 años de experiencia en derecho sanitario</span>, el Dr. Robles ha trabajado en distintos roles jurídicos dentro de la Administración Pública, brindándole una comprensión profunda del sistema de salud desde adentro.
                   </p>
@@ -426,12 +433,25 @@ export default function HomePage() {
                   <p className="text-sm md:text-base">
                     Es quien <span className="font-semibold text-slate-900">personalmente realiza las evaluaciones iniciales y la admisión de cada caso</span>, garantizando un análisis detallado y estratégico desde el primer contacto.
                   </p>
+                  <p className="text-sm md:text-base">
+                    Su enfoque se centra en entender no solo los aspectos legales, sino también las implicancias médicas de cada procedimiento, trabajando de manera interdisciplinaria con profesionales de la salud para construir argumentos sólidos que respalden el derecho de cada paciente a recibir la atención que necesita.
+                  </p>
+                  <p className="text-sm md:text-base">
+                    El equipo del estudio cuenta con abogados especializados en derecho sanitario y constitucional, así como con una red de profesionales médicos y psicólogos que colaboran en la evaluación y fundamentación de cada caso particular.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Divisor sutil entre secciones */}
+      <div className="relative h-8 bg-linear-to-b from-white via-slate-50 to-white">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t border-slate-200/60"></div>
+        </div>
+      </div>
 
       {/* 5. CASOS DE ÉXITO - PREVIEW */}
       <section className="py-16 md:py-24 bg-white relative overflow-hidden">
@@ -456,9 +476,11 @@ export default function HomePage() {
 
                 {/* Mini preview de casos */}
                 <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-4 mt-8">
-                  <div className="flex flex-col items-center gap-3 bg-slate-50 p-6 rounded-xl border border-slate-200">
-                    <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center shrink-0">
-                      <span className="text-white text-sm font-bold">✓</span>
+                  <div className="flex flex-col items-center gap-3 bg-slate-50 p-6 rounded-xl border border-slate-200 hover:border-green-500 hover:shadow-md transition-all">
+                    <div className="w-5 h-5 rounded-md border-2 border-green-600 flex items-center justify-center shrink-0">
+                      <svg className="w-3 h-3 text-green-600" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/>
+                      </svg>
                     </div>
                     <div className="text-center">
                       <p className="font-semibold text-slate-900 mb-1">Cirugía Ortognática</p>
@@ -466,9 +488,11 @@ export default function HomePage() {
                     </div>
                   </div>
                   
-                  <div className="flex flex-col items-center gap-3 bg-slate-50 p-6 rounded-xl border border-slate-200">
-                    <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center shrink-0">
-                      <span className="text-white text-sm font-bold">✓</span>
+                  <div className="flex flex-col items-center gap-3 bg-slate-50 p-6 rounded-xl border border-slate-200 hover:border-green-500 hover:shadow-md transition-all">
+                    <div className="w-5 h-5 rounded-md border-2 border-green-600 flex items-center justify-center shrink-0">
+                      <svg className="w-3 h-3 text-green-600" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/>
+                      </svg>
                     </div>
                     <div className="text-center">
                       <p className="font-semibold text-slate-900 mb-1">Mentoplastia Funcional</p>
@@ -476,9 +500,11 @@ export default function HomePage() {
                     </div>
                   </div>
                   
-                  <div className="flex flex-col items-center gap-3 bg-slate-50 p-6 rounded-xl border border-slate-200">
-                    <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center shrink-0">
-                      <span className="text-white text-sm font-bold">✓</span>
+                  <div className="flex flex-col items-center gap-3 bg-slate-50 p-6 rounded-xl border border-slate-200 hover:border-green-500 hover:shadow-md transition-all">
+                    <div className="w-5 h-5 rounded-md border-2 border-green-600 flex items-center justify-center shrink-0">
+                      <svg className="w-3 h-3 text-green-600" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/>
+                      </svg>
                     </div>
                     <div className="text-center">
                       <p className="font-semibold text-slate-900 mb-1">Reconstrucción Maxilofacial</p>
