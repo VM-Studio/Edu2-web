@@ -16,10 +16,10 @@ export default function CasosDeExitoPage() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px]"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight text-white">
               Casos de Éxito
             </h1>
-            <p className="text-lg md:text-xl text-slate-200 mb-8 font-light leading-relaxed">
+            <p className="text-lg md:text-xl text-white mb-8 font-light leading-relaxed">
               Estos son algunos de los casos que ganamos recientemente, demostrando nuestro compromiso y experiencia en conseguir las coberturas que corresponden por ley.
             </p>
           </div>
@@ -31,15 +31,6 @@ export default function CasosDeExitoPage() {
         <div className="hidden md:block absolute bottom-0 left-0 w-[400px] h-[400px] bg-slate-100 rounded-full blur-3xl opacity-30"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12 md:mb-16">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900">
-                Casos Ganados Recientemente
-              </h2>
-              <p className="text-slate-600 mt-4 md:mt-6 text-base md:text-lg max-w-3xl mx-auto leading-relaxed px-4">
-                Cada caso representa una victoria para nuestros clientes y la defensa del derecho a la salud.
-              </p>
-            </div>
-
             <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {/* Caso 1 - Cirugía Ortognática */}
               <div className="bg-linear-to-br from-slate-900 to-slate-800 text-white p-6 md:p-8 rounded-2xl shadow-2xl border-2 border-slate-700 hover:shadow-3xl hover:scale-105 transition-all duration-300 relative overflow-hidden group">
